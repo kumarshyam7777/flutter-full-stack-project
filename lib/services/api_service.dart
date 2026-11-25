@@ -3,12 +3,13 @@ import 'package:http/http.dart' as http;
 import '../models/product.dart';
 import '../utils/logger.dart';
 
+
 class ApiService {
   static const String _base = 'https://dummyjson.com';
   
   // Cache storage
   static final Map<String, List<Product>> _cache = {};
-  static List<String>? _categoriesCache;
+  static List<String>? _categoriesCache;  
   static bool _lastFetchFailed = false;
 
   static bool get isOffline => _lastFetchFailed;
